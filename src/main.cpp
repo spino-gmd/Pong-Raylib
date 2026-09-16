@@ -24,7 +24,10 @@ int main()
     const int scr_x = 1000;
     const int scr_y = 800;
     int cont = 0;
+    float time_ran = 0;
     bool lost = false;
+    bool low = false;
+
 
     InitWindow(scr_x, scr_y, "Projeto Raylib");
 
@@ -44,6 +47,18 @@ int main()
 
     while (!WindowShouldClose())
     {
+
+        if(low){
+        ball.speed_x = ball.speed_y = 2.5;
+        time_ran += GetFrameTime();
+        }
+
+        if(time_ran >= 2.3){
+        ball.speed_x = ball.speed_y = 6;
+        time_ran = 0;
+        low = false;
+        }
+
         // Eventos
         if (IsKeyDown(KEY_RIGHT)) rect.x += 5;
         else if (IsKeyDown(KEY_LEFT)) rect.x -= 5;
@@ -77,8 +92,9 @@ int main()
             int larg1 = MeasureText("Você perdeu!", 120);
             DrawText("Você perdeu!", (scr_x - larg1) / 2, scr_y / 2, 120, WHITE);
             lost = false;
+            low = true;
             EndDrawing();
-            WaitTime(1.5);
+            WaitTime(1.0);
         }else{
 
         ClearBackground(verde);
