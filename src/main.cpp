@@ -24,7 +24,6 @@ int main()
     const int scr_x = 1100;
     const int scr_y = 1000;
     int cont = 0;
-    float time_ran = 0;
     bool lost = false;
 
 
@@ -34,7 +33,7 @@ int main()
 
     // Bola
     ball.position = {scr_x / 2, scr_y / 4};
-    ball.speed_x = ball.speed_y = 7;
+    ball.speed_x = ball.speed_y = 8;
     ball.radius = 25;
 
     // Paddle
@@ -46,10 +45,12 @@ int main()
 
     while (!WindowShouldClose())
     {
+        
+        if(!lost){
         Rectangle pad = {rect.x,950,rect.width,rect.height};
         // Eventos
-        if (IsKeyDown(KEY_RIGHT)) rect.x += 5.5;
-        else if (IsKeyDown(KEY_LEFT)) rect.x -= 5.5;
+        if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) rect.x += 5.5;
+        else if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) rect.x -= 5.5;
 
         // Movimento da bola
         ball.position.x += ball.speed_x;
@@ -70,27 +71,28 @@ int main()
             ball.speed_y *= -1;
             cont++;
         }
-
+    }
         // Desenho
         BeginDrawing();
+        ClearBackground(verde);
 
         if (lost){
-            int larg1 = MeasureText("Você perdeu!", 120);
-            DrawText("Você perdeu!", (scr_x - larg1) / 2, scr_y / 2, 120, WHITE);
+            int larg2 = MeasureText("Você perdeu!", 120);
+            int larg3 = MeasureText("Aperte ENTER para continuar",60);
+            DrawText("Você perdeu!", (scr_x - larg2) / 2, scr_y / 2, 120, WHITE);
+            DrawText("Aperte ENTER para continuar", (scr_x - larg3) / 2, scr_y / 4, 60, WHITE);
+            if(IsKeyDown(KEY_ENTER)){
             lost = false;
             if(rect.x >= scr_x/2) ball.speed_x = 6;
             else ball.speed_x = -6;
-            EndDrawing();
-            WaitTime(1.0);
+            }
         }else{
-
-        ClearBackground(verde);
 
         DrawCircleV(ball.position, ball.radius, WHITE);
         DrawRectangle(rect.x,950,rect.width,rect.height,WHITE);
 
-        int larg2 = MeasureText("Pong", 40);
-        DrawText("Pong", (scr_x - larg2)/2, 50, 40, WHITE);
+        int larg1 = MeasureText("Pong", 40);
+        DrawText("Pong", (scr_x - larg1)/2, 50, 40, WHITE);
         DrawText(TextFormat("%d",cont), 10, 10, 40, WHITE);
         }
         EndDrawing();
