@@ -1,4 +1,4 @@
-ING:
+ENG:
 
 That's my first project using the Raylib library, I created a minimalist single-player version of Pong.
 
