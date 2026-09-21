@@ -13,7 +13,7 @@ class Paddle
 {
     public:
     float x;
-    int width, height;
+    float width, height;
 };
 
 Ball ball;
