@@ -53,10 +53,11 @@ Pong-Raylib/
 │   └── libstdc++-6.dll
 ├── src/     /* Game code */
 │  └── main.cpp
-├── .gitattributes         /* Other running configurations
-├── .gitignore             and Makefile archive
-├── main.code-workspace    (from the template)
-├── Makefile               */
+├── .gitattributes         /* Git running configurations
+├── .gitignore              (from the template) */
+├── LICENSE            /* LICENSE */
+├── main.code-workspace    /* Workspace and Makefile 
+├── Makefile               configurations  (from the template) */
 └── README.md   /* README */
 
 ```
