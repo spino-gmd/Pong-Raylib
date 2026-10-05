@@ -27,7 +27,7 @@ int main()
     bool lost = false;
 
 
-    InitWindow(scr_x, scr_y, "Projeto Raylib");
+    InitWindow(scr_x, scr_y, "Pong");
 
     Color verde = {15,150,67,255};
 

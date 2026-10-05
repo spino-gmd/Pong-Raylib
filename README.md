@@ -15,6 +15,12 @@ remains under the copyright of its respective authors.
 I created this game specially to measure my knowledge about Raylib (the library used in this project), since I'm currently a beginner in the game making area.
 Be known that this game might have some flaws in it's gameplay, and if you want, you can tell me about any flaw you find in this project.
 
+This awesome game consists of a ball that bounces through the edges of the window and a movable pad controlled by the player that can deflect the ball.
+
+You can control the pad by pressing the "A" or "<-" keys to go left, and "D" or "->" to go right. Your mission as the pad is to not let ball hit the bottom of the window. The score in the top-left increases when the ball is succesfully deflected. If you lose, press "ENTER" to restart the game.
+
+This game is also a great way to spend time, and if you're a starter in Raylib, you can analyse the game code and try to redo it yourself, learning some of this library fundamentals.
+
 <img src = "assets/game-footage.png" alt = "In-game Footage" width = 400>
 
 ## How to run:
@@ -24,7 +30,7 @@ The installer for this library is available at the creator's website: <a href="h
 
 Then, you'll need these two requirements:
 <ul>
-<li> C++</li>
+<li> C/C++ running extension on VSCode.</li>
 <li> A C++ running compiler, like MinGW (Windows), GCC (Linux) or Clang (Linux/macOS).
 </ul>
 
