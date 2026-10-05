@@ -26,12 +26,20 @@ This game is also a great way to spend time, and if you're a starter in Raylib, 
 ## How to run:
 Firstly, you'll need to have the Raylib library already installed, since the whole game structure is based around it.
 
-The installer for this library is available at the creator's website: <a href="https://www.raylib.com/" target="_blank" >raylib.com </a>
+The installer for this library is available at the creator's website: <a href="https://www.raylib.com/" target="_blank" >raylib.com </a>.
 
-Then, you'll need these two requirements:
+When you open the site, you can select downloading the file without donating anything to the creator. That will take you to main screen where you can succesfully download the installer archive.
+
+With the installer opened, you can select the install path (C:\raylib by default), and after that, wait for the full library to install at that path.
+
+For more details, please watch this tutorial (you can skip to minute 1:10 if you already have VSCode configured to C++): <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8" target="_blank"> 
+How to install raylib with C++ on Windows and use it with Visual Studio Code.</a>
+
+Then, you'll need these three requirements:
 <ul>
 <li> C/C++ running extension on VSCode.</li>
-<li> A C++ running compiler, like MinGW (Windows), GCC (Linux) or Clang (Linux/macOS).
+<li> A C++ running compiler, like MinGW.
+<li> VSCode.
 </ul>
 
 If you have already met all these requirements, you can run the code by pressing F5 in VSCode (The project is configured to build and launch the game through VSCode's debugging configuration. Therefore, the game should be
@@ -56,8 +64,8 @@ Pong-Raylib/
 ├── .gitattributes         /* Git running configurations
 ├── .gitignore              (from the template) */
 ├── LICENSE            /* LICENSE */
-├── main.code-workspace    /* Workspace and Makefile 
-├── Makefile               configurations  (from the template) */
+├── main.code-workspace    /* Workspace and Makefile configurations to automatize the program running, making
+├── Makefile               the code run without typing a lot of commands on the terminal (from the template) */
 └── README.md   /* README */
 
 ```
