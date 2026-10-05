@@ -57,7 +57,8 @@ Pong-Raylib/
 │   ├── settings.json
 │   └── tasks.json
 ├── assets/   /* Images used */
-│   └── game-footage.png
+│   ├── game-footage.png
+│   └── installing-screen.png
 ├── lib/      /* Compiler configuration (from the template)
 │   ├── libgcc_s_dw2-1.dll
 │   └── libstdc++-6.dll
